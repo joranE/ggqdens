@@ -1,0 +1,21 @@
+Package: ggqdens
+Type: Package
+Title: Density plots with vertical quantile lines
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Joran", "Elias",
+      email = "joran.elias@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: Extends the geom_density to allow drawing vertical quantile lines.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+  ggplot2 (>= 3.5.0),
+  R (>= 3.6.0)
+Imports:
+  grid
+LazyData: true
+RoxygenNote: 7.3.1
