@@ -11,14 +11,14 @@
 #' @import grid
 #' @export
 geom_density_quantile <- function(mapping = NULL, data = NULL,
-                                   position = "identity", ...,
-                                   quantiles = NULL,
-                                   quantile_color = "red",
-                                   quantile_linewidth = 0.5,
-                                   quantile_linetype = "dashed",
-                                   na.rm = FALSE,
-                                   show.legend = NA,
-                                   inherit.aes = TRUE) {
+                                  position = "identity", ...,
+                                  quantiles = NULL,
+                                  quantile_color = "red",
+                                  quantile_linewidth = 0.5,
+                                  quantile_linetype = "dashed",
+                                  na.rm = FALSE,
+                                  show.legend = NA,
+                                  inherit.aes = TRUE) {
   params <- list(
     na.rm = na.rm,
     quantiles = quantiles,
@@ -101,6 +101,7 @@ GeomDensityQuantile <-
               )
             })
 
+            # Not sure why/if I need this
             ggplot2:::ggname("geom_density_quantiles", grid::gTree(children = do.call("gList", grobs)))
           },
 
@@ -122,8 +123,8 @@ GeomDensityQuantile <-
                 positions$y,
                 default.units = "native",
                 gp = grid::gpar(col = positions$colour[1],
-                          lwd = positions$linewidth[1] * .pt,
-                          lty = positions$linetype[1])
+                                lwd = positions$linewidth[1] * .pt,
+                                lty = positions$linetype[1])
               )
             } else {
               # Get the index for this quantile to match with aesthetics
